@@ -3,8 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import '@/assets/styles/ClearFix.css'
+import '@/assets/styles/iconfont.css'
+import '@/assets/script/FitRem.js'
 
 Vue.config.productionTip = false
+// 引入并使用rem适配工具
 
 /* eslint-disable no-new */
 new Vue({
