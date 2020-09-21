@@ -8,7 +8,7 @@
             <div class="iconfont record-icon" v-if="switchSelect(index)" v-html="item.icon"></div>
             <div class="iconfont record-icon" v-else v-html="item.SelectedIcon"></div>
             <div class="iconfont record-icon-selected" v-else v-html="item.SelectedIcon"></div>
-            <div class="title">{{item.title}}</div>
+            <!-- <div class="title">{{item.title}}</div> -->
           </router-link>
       </div>
   </div>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name:'Footer',
+    name:'HomeFooter',
     data() {
         return {
             footerList:[
@@ -24,13 +24,13 @@ export default {
                     icon:'&#xe701;',
                     SelectedIcon:'&#xe702;',
                     title:'记录',
-                    link:'/home'
+                    link:'/home/train'
                 },
                 {
                     icon:'&#xe732;',
                     SelectedIcon:'&#xe731;',
                     title:'回顾',
-                    link:'/review'
+                    link:'/home/review'
                 }
             ],
             isSelected:true,
@@ -64,7 +64,7 @@ export default {
         right: 0;
         bottom: 0;
         background-color: @bgcolor;
-        height: 3.5rem;
+        height: 3rem;
         width: 100%;
         border-top: .1rem solid #666;
         .record,.review{
@@ -72,9 +72,7 @@ export default {
             flex: 1;
             .iconfont{
                 font-size: 2rem;
-            }
-            .title{
-                font-size: 1rem;
+                line-height: 3rem;
             }
         }
         .select{
